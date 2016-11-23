@@ -38,6 +38,9 @@ if (localStorage.getItem("h") && localStorage.getItem("h") == 3) {
 if (localStorage.getItem("skin") && localStorage.getItem("skin").match(/^http(s)?:\/\/(.*?)+(jpg|bmp|png|gif)$/)) {
     document.getElementById('skin').value = localStorage.getItem("skin");
 }
+if(document.getElementById('statsContinue')){
+    document.getElementById('statsContinue').addEventListener("click", function(){i=setInterval(function(){init();},500);}, false);
+}
 if (document.getElementsByClassName('btn btn-play-guest btn-success btn-needs-server')[0]) {
     document.getElementsByClassName('btn btn-play-guest btn-success btn-needs-server')[0].addEventListener("click", setSkin, false);
 }
